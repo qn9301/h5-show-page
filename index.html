@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- 如果安装 GCF 按其渲染页面，否则使用最高版本IE内核渲染 -->
+    	<meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1″ />
+	<!-- 强制让文档与设备的宽度保持1:1 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+	<!-- 删除默认的苹果工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!--  在web app应用下状态条（屏幕顶部条）的颜色 -->
+	 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	 <!-- 禁止了把数字转化为拨号链接 -->
+    	<meta name="format-detection" content="telephone=no" />
+    	<meta name="renderer" content="webkit" />
+    	<meta name="robots" content="index,follow" />
+    	<meta http-equiv="cache-control" content="max-age=0" />
+    	<meta http-equiv="cache-control" content="no-cache" />
+    	<meta http-equiv="pragma" content="no-cache" />
+    	<link rel="stylesheet" type="text/css" href="css/eqxiu.css">
+	<title>翁一婧个人简历</title>
+	<script>
+		function adapt(designWidth, rem2px){
+		  var d = window.document.createElement('div');
+		  d.style.width = '1rem';
+		  d.style.display = "none";
+		  var head = window.document.getElementsByTagName('head')[0];
+		  head.appendChild(d);
+		  var defaultFontSize = parseFloat(window.getComputedStyle(d, null).getPropertyValue('width'));
+		  d.remove();
+		  document.documentElement.style.fontSize = window.innerWidth / designWidth * rem2px / defaultFontSize * 100 + '%';
+		  var st = document.createElement('style');
+		  var portrait = "@media screen and (min-width: "+window.innerWidth+"px) {html{font-size:"+ ((window.innerWidth/(designWidth/rem2px)/defaultFontSize)*100) +"%;}}";
+		  var landscape = "@media screen and (min-width: "+window.innerHeight+"px) {html{font-size:"+ ((window.innerHeight/(designWidth/rem2px)/defaultFontSize)*100) +"%;}}"
+		  st.innerHTML = portrait + landscape;
+		  head.appendChild(st);
+		  return defaultFontSize
+		};
+		var defaultFontSize = adapt(320, 100);
+		console.log( document.documentElement.style.fontSize );
+	</script>
+</head>
+<body>
+	<div id="loading" style="position:fixed;left:0px;top:0px;right:0px;bottom:0px;z-index:100;background:white;">loading...</div>
+	<div id="music">
+		<audio src="fightSong.mp3" loop></audio>
+	</div>
+	<div id="page">
+		<div class="sceneOne">
+			<div class="top">
+				<img src="./images/lights.png" class="light"/>
+				<img src="./images/square.png" class="square"/>
+				<img src="./images/logo.jpg" class="logo" />
+				
+			</div>
+			<div class="middle">
+				<img src="./images/bottomSquare.png" class="bottomS">
+				<img src="./images/topSquare.png" class="topS">
+			</div>
+		</div>
+		<div class="sceneTwo">
+			<div class="top">
+				<img src="./images/lights.png" class="light"/>
+				<img src="./images/square.png" class="square"/>
+				<img src="./images/logo.jpg" class="logo" />
+				
+			</div>
+			<div class="middle">
+				<img src="./images/bottomSquare.png" class="bottomS">
+				<img src="./images/topSquare.png" class="topS">
+			</div>
+		</div>
+		<div class="sceneThree" data-index = "3">sceneThree</div>
+		<div class="sceneFour" data-index = "4">sceneFour</div>
+		<div class="sceneFive" data-index = "5">sceneFive</div>
+		<div class="sceneSix" data-index = "6">sceneSix</div>	
+	</div>
+		
+	<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/container.js"></script>
+	<script src="js/media.js"></script>
+	<script src="js/pages.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

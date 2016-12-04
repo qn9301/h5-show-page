@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="utf-8" />
+	<!-- 如果安装 GCF 按其渲染页面，否则使用最高版本IE内核渲染 -->
+    	<meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1″ />
+	<!-- 强制让文档与设备的宽度保持1:1 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+	<!-- 删除默认的苹果工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!--  在web app应用下状态条（屏幕顶部条）的颜色 -->
+	 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	 <!-- 禁止了把数字转化为拨号链接 -->
+    	<meta name="format-detection" content="telephone=no" />
+    	<meta name="renderer" content="webkit" />
+    	<meta name="robots" content="index,follow" />
+    	<meta http-equiv="cache-control" content="max-age=0" />
+    	<meta http-equiv="cache-control" content="no-cache" />
+    	<meta http-equiv="pragma" content="no-cache" />
+</head>
+<body>
+	
+	<button id="btn"> 
+		按钮
+		<audio src="fightSong.mp3" id="audio" autoplay></audio>
+	</button>
+	<script>
+		var audio = document.getElementById("audio");
+		btn.onclick = function(){
+			console.log(audio.paused);
+			audio.paused ? audio.play() : audio.pause();
+		}
+	</script>
+</body>
+</html>
